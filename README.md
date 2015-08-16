@@ -6,8 +6,6 @@
 2. [Module Description](#module-description)
 3. [Setup](#setup)
 4. [Usage](#usage)
-    * [Install](#install)
-    * [Uninstall](#uninstall)
 5. [Development](#development)
 
 ## Overview
@@ -32,11 +30,38 @@ https://github.com/sspans/ladvd
 
 ## Setup
 
+You   can   use   all  the   variables   you   can   find   in  the   manual   :
+http://www.linuxcertif.com/man/8/ladvd/. We use all default values in templates.
+
+```puppet
+class { 'ladvd':
+  enable  => true,
+}
+```
+
 ## Usage
 
-### Install
+### Run as daemon
 
-### Uninstall
+```puppet
+class { 'ladvd':
+  package       => true,
+  service       => true,
+  enable        => true,
+  ladvd_options => '-a -r'
+}
+```
+
+### Run one time
+
+```puppet
+class { 'ladvd':
+  package       => true,
+  service       => false,
+  enable        => false,
+  ladvd_options => '-a -o'
+}
+```
 
 ## Development
 
