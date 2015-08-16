@@ -1,8 +1,7 @@
 # == Class: ladvd
 #
-class ladvd ($package = true, $service = true, $enable = true, $ladvd_options = $ladvd::params::ladvd_options) {
-  include ladvd::params
-
+class ladvd ($package = true, $service = true, $enable = true, $ladvd_options = $ladvd::params::ladvd_options) inherits 
+ladvd::params {
   $ladvd_package_name = $ladvd::params::ladvd_package_name
   $ladvd_service_name = $ladvd::params::ladvd_service_name
   $ladvd_sysconfig    = $ladvd::params::ladvd_sysconfig
