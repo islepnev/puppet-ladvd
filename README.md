@@ -58,7 +58,7 @@ class { 'ladvd':
 class { 'ladvd':
   package       => true,
   service       => false,
-  enable        => false,
+  enable        => true,
   ladvd_options => '-a -o'
 }
 ```
