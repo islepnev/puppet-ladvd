@@ -22,25 +22,29 @@ class ladvd (
     default : { fail('service must be true or false') }
   }
 
-  package { $ladvd_package_name: ensure => $ensure_package, }
+  if ($lsbmajdistrelease >= 7) {
+    package { $ladvd_package_name: ensure => $ensure_package, }
 
-  if ($package == true) or ($package == latest) {
-    service { $ladvd_service_name:
-      ensure     => $ensure_service,
-      enable     => $enable,
-      hasrestart => true,
-      hasstatus  => true,
-      require    => Package[$ladvd_package_name],
-    }
+    if ($package == true) or ($package == latest) {
+      service { $ladvd_service_name:
+        ensure     => $ensure_service,
+        enable     => $enable,
+        hasrestart => true,
+        hasstatus  => false,
+        require    => Package[$ladvd_package_name],
+      }
 
-    file { $ladvd_sysconfig:
-      ensure  => present,
-      path    => $ladvd_sysconfig,
-      mode    => '0644',
-      content => template("ladvd/sysconfig.${::operatingsystem}.erb"),
-      require => Package[$ladvd_package_name],
-      notify  => Service[$ladvd_service_name],
+      file { $ladvd_sysconfig:
+        ensure  => present,
+        path    => $ladvd_sysconfig,
+        mode    => '0644',
+        content => template("ladvd/sysconfig.${::operatingsystem}.erb"),
+        require => Package[$ladvd_package_name],
+        notify  => Service[$ladvd_service_name],
+      }
     }
+  } else {
+    notice("Module ladvd is not supported on ${::lsbdistcodename}")
   }
 }
 # EOF
