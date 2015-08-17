@@ -22,7 +22,7 @@ class ladvd (
     default : { fail('service must be true or false') }
   }
 
-  if ($lsbmajdistrelease >= 7) {
+  if ($::lsbmajdistrelease >= 7) {
     package { $ladvd_package_name: ensure => $ensure_package, }
 
     if ($package == true) or ($package == latest) {
