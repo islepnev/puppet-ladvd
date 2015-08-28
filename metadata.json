@@ -1,6 +1,6 @@
 {
   "name": "rentabiliweb-ladvd",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "Rentabiliweb",
   "license": "ISC",
   "summary": "Rentabiliweb ladvd module",
@@ -10,7 +10,7 @@
   "issues_url": "https://github.com/rentabiliweb/puppet-ladvd/issues",
   "operatingsystem_support": [
     { "operatingsystem": "Debian", "operatingsystemrelease": [ "7", "8" ] },
-	{ "operatingsystem": "Ubuntu", "operatingsystemrelease": [ "14.04", "14.10", "15.04" ] }
+    { "operatingsystem": "Ubuntu", "operatingsystemrelease": [ "14.04", "14.10", "15.04" ] }
   ],
   "tags": [ "puppet", "ladvd", "lldp", "cdp", "edp", "fdp", "ndp", "rentabiliweb" ],
   "requirements": [
