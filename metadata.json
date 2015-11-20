@@ -1,18 +1,20 @@
 {
-  "name": "rentabiliweb-ladvd",
-  "version": "1.0.9",
-  "author": "Rentabiliweb",
+  "name": "dalenys-ladvd",
+  "version": "2.0.0",
+  "author": "Dalenys",
   "license": "ISC",
-  "summary": "Rentabiliweb ladvd module",
-  "source": "https://github.com/rentabiliweb/puppet-ladvd",
-  "dependencies": [],
-  "project_page": "https://github.com/rentabiliweb/puppet-ladvd",
-  "issues_url": "https://github.com/rentabiliweb/puppet-ladvd/issues",
+  "summary": "Dalenys ladvd module",
+  "source": "https://github.com/dalenys/puppet-ladvd",
+  "dependencies": [
+	{ "name":"dalenys-dalenyslib", "version_requirement": ">= 1.0.0"}
+  ],
+  "project_page": "https://github.com/dalenys/puppet-ladvd",
+  "issues_url": "https://github.com/dalenys/puppet-ladvd/issues",
   "operatingsystem_support": [
     { "operatingsystem": "Debian", "operatingsystemrelease": [ "7", "8" ] },
     { "operatingsystem": "Ubuntu", "operatingsystemrelease": [ "14.04", "14.10", "15.04" ] }
   ],
-  "tags": [ "puppet", "ladvd", "lldp", "cdp", "edp", "fdp", "ndp", "rentabiliweb" ],
+  "tags": [ "ladvd", "lldp", "cdp", "edp", "fdp", "ndp" ],
   "requirements": [
     { "name": "puppet", "version_requirement": "3.x" }
   ]
