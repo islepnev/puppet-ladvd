@@ -6,7 +6,7 @@
   "summary": "Dalenys ladvd module",
   "source": "https://github.com/dalenys/puppet-ladvd",
   "dependencies": [
-	{ "name":"dalenys-danelib", "version_requirement": ">= 1.0.0"}
+	{ "name": "dalenys-danelib", "version_requirement": ">= 1.0.0"}
   ],
   "project_page": "https://github.com/dalenys/puppet-ladvd",
   "issues_url": "https://github.com/dalenys/puppet-ladvd/issues",
