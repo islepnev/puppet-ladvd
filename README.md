@@ -10,7 +10,7 @@
 
 ## Overview
 
-The puppet-ladvd module enables you to install, deploy, and configure ladvd.
+The ladvd module enables you to install, deploy, and configure ladvd.
 
 ## Module Description
 
