@@ -1,4 +1,4 @@
-# dalenys-ladvd ![License badge][license-img] [![Puppet badge][puppet-img]][puppet-url]
+# puppet-ladvd ![License badge][license-img] [![Puppet badge][puppet-img]][puppet-url]
 
 #### Table of Contents
 
@@ -10,7 +10,7 @@
 
 ## Overview
 
-The dalenys-ladvd module enables you to install, deploy, and configure ladvd.
+The puppet-ladvd module enables you to install, deploy, and configure ladvd.
 
 ## Module Description
 
